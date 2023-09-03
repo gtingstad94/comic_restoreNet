@@ -33,7 +33,7 @@ During training, there are a few preprocessing operations baked in by default.
 1. Regularization is enhanced by randomly rotating, flipping, and cropping the datasets. A custom dataloader is also used to ensure that the same images aren't sent to the training model on each epoch.
 2. The model uses mse loss between the original high-fidelity image and a reconstructed version of a JPEG compressed, 50% resized version of the original. To achieve this, a compressed and resized version of each image is stored during each pass, both images are converted into a set of image patches, and loss is calculated and the network weights updated on each pass of an image **patch**. This decision was primarily made for memory management, since the model weights must be stored in memory until backpropgatation.
 
-### Usage
+### How to Run
 Currently, all you can do is train a model and observe its' performance on each epoch. To run the model yourself, you need to edit the train.py file for the following variables:
 **training_data** -> point to a folder that contains high-resolution images. They must be grayscale. If you wish, you can organize your data into subfolders.
 **root_folder** -> point to a root folder where you want your output data folder to be placed
