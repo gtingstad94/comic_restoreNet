@@ -1,0 +1,13 @@
+# This file contains configuration parameters for training and testing RestoreNET models
+
+train:
+  epochs: 100
+  batch_size: 1
+  sampler: None
+  num_workers: 0
+  train_dir: 'F:\ImageRestoration\Data\Dataset_SomeArtifacts\training'
+  val_dir: 'F:\ImageRestoration\Data\Dataset_SomeArtifacts\validation'
+
+out:
+  root_folder: 'F:\ImageRestoration\runs'  #Where data from trainig runs is stored
+  run_name: 'RestoreNet'
